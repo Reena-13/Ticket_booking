@@ -8,9 +8,8 @@
     <body>
         <h1>Booking Details</h1>
         <br>
-      
         <form name="myForm1" id="form1"  action="">
-           <input type="radio" id="oneway" name="radio" >
+           <input type="radio" id="oneway" name="radio">
            <label for="One way">One Way</label>
             <input type="radio" id="Roundtrip" name="radio">
             <label for="Round trip">Round trip </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,58 +26,59 @@
             <input type="text"  name="to" required><br><br>
             
             <label for="Departure">Departure:</label>
-            <input type="date" id="Departure date"  required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="date" id="Departure"  required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label for="Return">Return date:</label>
-            <input type="date" id="Return date"  required><br><br>
+            <input type="date" id="Return"  required><br><br>
             <h3>Number of passengers</h3>
             
-            <label for="Number of adults" >Adults:</label>
-            <input type="number" id="Number of adults" name="adults">
-            <label for="Number of childern" >Children:</label>
-            <input type="number" id="Number of children" name="Children">
+            <label for="adults" >Adults:</label>
+            <input type="number" id="adults" name="adults">
+            <label for="childern" >Children:</label>
+            <input type="number" id="children" name="Children">
 
         </form>
         <br>
 
         <h4>Passenger 1 details</h4>
         <form name="details" id="form">
-            <label for="fname">Name:</label>
+            <label for="fname1">Name:</label>
             <input type="text" id="fname1" name="fname">
             <label for="Gender">Gender:</label>
             <input type="radio" name="gender"  value="Male" >
             <label for="Male">Male</label>
             <input type="radio" name="gender" value="female">
             <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for = "age">Age:</label>
-            <input type = "number" id ="Age" name="'Age">
+            <label for = "age1">Age:</label>
+            <input type = "number" id ="age1" name="age1" required>
          
-        <h4>Passenger 2 details</h4>
+                 <h4>Passenger 2 details</h4>
           
         <label for="fname">Name:</label>
         <input type="text" id="fname2" name="fname">
         <label for="Gender">Gender:</label>
-        <input type="radio" name="gender"  value="Male" >
+        <input type="radio" name="name2"  value="Male" >
         <label for="Male">Male</label>
-        <input type="radio" name="gender" value="female">
+        <input type="radio" name="name2" value="female">
         <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <label for = "age">Age:</label>
-        <input type = "number" id ="Age" name="'Age">
+        <label for = "age2">Age:</label>
+        <input type = "number" id ="age2" name="age2" required>
          
           <h4> Passenger 3 details</h4>
         
-            <label for="fname">Name:</label>
-            <input type="text" id="fname3" name="fname">
-            <label for="Gender">Gender:</label>
-            <input type="radio" name="gender"  value="Male" >
-            <label for="Male">Male</label>
-            <input type="radio" name="gender" value="female">
-            <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for = "age">Age:</label>
-            <input type = "number" id ="Age" name="'Age">
+          <label for="fname3">Name:</label>
+          <input type="text" id="fname3" name="fname3">
+          <label for="Gender">Gender:</label>
+          <input type="radio" name="name3"  value="Male" >
+          <label for="Male">Male</label>
+          <input type="radio" name="name3" value="female">
+          <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for = "age3">Age:</label>
+          <input type = "number" id ="age3" name="age3" required>
           </form>
           <br><br>
+        </form>
           
-         <form  name="myForm6" >
+        <form  name="myForm6" >
              
         <label for="Food">Food type:</label>
 
@@ -98,56 +98,76 @@
              
         </select>
         <br><br>
+        </form>
+
         <form class="lastpage">
             <h3 class="Details">Payment Details:</h3>
-            <div id="input3">
-                    <label>Full Name:</label>
-                    <input type="text" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <label>Email:</label>
-                    <input type="email" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <label>Mobile:</label>
-                    <input type="phone" required><br><br>
+                <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label for="mobile">Mobile:</label>
+                    <input type="phone" id="mobile" required><br><br>
                     <label>Address:</label>
                     <textarea rows="3" cols="30" type="Rich TExt" id="address"></textarea>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <select  id="payment" required>
+                                <option value="" required>Payment Method</option>
+                                <option value="">Debit card</option>
+                                <option value="">Credit card</option>
+                        </select><br><br>
+                   
+         
             
-            <!-- <div class="select"> -->
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select  id="payment" required>
-                        <option value="" required>Payment Method</option>
-                        <option value="">Debit card</option>
-                        <option value="">Credit card</option>
-                </select><br><br>
-            <!-- </div> -->
-             </div>  
-            </form>
         
             
         
          
-        <input type="submit" value="Submit" class="btn" onclick="validation()">
+                   <input type="submit" value="Submit" class="btn" onclick="validation()">
 
        
      </form>
+ 
   
       <script>
       function validation(){
         var name1 = document.forms["details"]["fname1"].value;
         var name2 = document.forms["details"]["fname2"].value;
         var name3 = document.forms["details"]["fname3"].value;
+        var age1=document.forms["details"]["age1"].value;
+        var age2=document.forms["details"]["age2"].value;
+        var age3=document.forms["details"]["age3"].value;
     
         if(name1=="" || name1.length<6)
         {
         alert("enter valid name1");
             return false;}
 
+            if(age1==""){
+            alert("please enter age for passenger 1");
+               return false;
+        }
+
             if(name2=="" || name2.length<6)
         {
         alert("enter valid name2");
             return false;}
+
+            if(age2==""){
+            alert("please enter age for passenger 2");
+               return false;
+        }
+           
             if(name3=="" || name3.length<6)
         {
         alert("enter valid name3");
             return false;
         }
+        if(age3==""){
+            alert("please enter age for passenger 3");
+               return false;
+        }
+        
             
     }
     //   const form = document.getElementById('form');
@@ -189,16 +209,7 @@
     //         formControl.className = 'form-control success';
     //     }
         
-    //     // SOCIAL PANEL JS
-    //     const floating_btn = document.querySelector('.floating-btn');
-    //     const close_btn = document.querySelector('.close-btn');
-    //     const social_panel_container = document.querySelector('.social-panel-container');
-    //     floating_btn.addEventListener('click', () => {
-    //         social_panel_container.classList.toggle('visible')
-    //     });
-    //     close_btn.addEventListener('click', () => {
-    //         social_panel_container.classList.remove('visible')
-    //     });
+    
     </script>
 
  
