@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="form.css">
+    
+</head>
+
+    
+    <body>
+        <h1>Booking Details</h1>
+        <br>
+      
+        <form name="myForm1" id="form1"  action="">
+           <input type="radio" id="oneway" name="radio" >
+           <label for="One way">One Way</label>
+            <input type="radio" id="Roundtrip" name="radio">
+            <label for="Round trip">Round trip </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </form>
+           
+        
+        
+        <br>
+
+        <form name="myForm2" >
+           <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+            <label for="to">To:</label>
+            <input type="text"  name="to" required><br><br>
+            
+            <label for="Departure">Departure:</label>
+            <input type="date" id="Departure date"  required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="Return">Return date:</label>
+            <input type="date" id="Return date"  required><br><br>
+            <h3>Number of passengers</h3>
+            
+            <label for="Number of adults" >Adults:</label>
+            <input type="number" id="Number of adults" name="adults">
+            <label for="Number of childern" >Children:</label>
+            <input type="number" id="Number of children" name="Children">
+
+        </form>
+        <br>
+
+        <h4>Passenger 1 details</h4>
+        <form name="details" id="form">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname1" name="fname">
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="gender"  value="Male" >
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for = "age">Age:</label>
+            <input type = "number" id ="Age" name="'Age">
+         
+        <h4>Passenger 2 details</h4>
+          
+        <label for="fname">Name:</label>
+        <input type="text" id="fname2" name="fname">
+        <label for="Gender">Gender:</label>
+        <input type="radio" name="gender"  value="Male" >
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for = "age">Age:</label>
+        <input type = "number" id ="Age" name="'Age">
+         
+          <h4> Passenger 3 details</h4>
+        
+            <label for="fname">Name:</label>
+            <input type="text" id="fname3" name="fname">
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="gender"  value="Male" >
+            <label for="Male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="Female">Female</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for = "age">Age:</label>
+            <input type = "number" id ="Age" name="'Age">
+          </form>
+          <br><br>
+          
+         <form  name="myForm6" >
+             
+        <label for="Food">Food type:</label>
+
+        <select name="Food" id="Food" value="Food">
+              <option value="Veg">Veg</option>
+              <option value="Non-Veg">Non-veg</option>
+              
+        </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              
+        
+        <label for="travel">Travel Class:</label>
+        <select name="travel" id="travel" value="Travel">
+              <option value="Economy">Economy</option>
+              <option value="Business">Business</option>
+              <option value="Firstclass">Firstclass</option>
+             
+        </select>
+        <br><br>
+        <form class="lastpage">
+            <h3 class="Details">Payment Details:</h3>
+            <div id="input3">
+                    <label>Full Name:</label>
+                    <input type="text" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label>Email:</label>
+                    <input type="email" required>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <label>Mobile:</label>
+                    <input type="phone" required><br><br>
+                    <label>Address:</label>
+                    <textarea rows="3" cols="30" type="Rich TExt" id="address"></textarea>
+            
+            <!-- <div class="select"> -->
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select  id="payment" required>
+                        <option value="" required>Payment Method</option>
+                        <option value="">Debit card</option>
+                        <option value="">Credit card</option>
+                </select><br><br>
+            <!-- </div> -->
+             </div>  
+            </form>
+        
+            
+        
+         
+        <input type="submit" value="Submit" class="btn" onclick="validation()">
+
+       
+     </form>
+  
+      <script>
+      function validation(){
+        var name1 = document.forms["details"]["fname1"].value;
+        var name2 = document.forms["details"]["fname2"].value;
+        var name3 = document.forms["details"]["fname3"].value;
+    
+        if(name1=="" || name1.length<6)
+        {
+        alert("enter valid name1");
+            return false;}
+
+            if(name2=="" || name2.length<6)
+        {
+        alert("enter valid name2");
+            return false;}
+            if(name3=="" || name3.length<6)
+        {
+        alert("enter valid name3");
+            return false;
+        }
+            
+    }
+    //   const form = document.getElementById('form');
+    //     const fname1 = document.getElementById('fname1');
+    //     const  fname2= document.getElementById('fname2');
+    //     const  fname3= document.getElementById('fname3');
+        
+    //     form.addEventListener('submit', e => {
+    //         e.preventDefault();
+    //         checkInputs();
+    //     });
+    //     function checkInputs() {
+    //         // trim to remove the whitespaces
+            
+    //         const fname1Value = fname1.value.trim();
+    //         const fname2Value = fname2.value.trim();
+    //         const fname3Value = fname3.value.trim();
+            
+    //        console.log(fname1Value);
+    //         if(fname1Value === '') 
+    //         {
+    //             setErrorFor(fname1, 'Passenger 1 name cannot be blank');
+    //         } else {
+    //             setSuccessFor(fname1);
+    //         }
+           
+               
+            
+           
+    //     }
+    //     function setErrorFor(input, message) {
+    //         const formControl = input.parentElement;
+    //         const small = formControl.querySelector('small');
+    //         formControl.className = 'form-control error';
+    //         small.innerText = message;
+    //     }
+    //     function setSuccessFor(input) {
+    //         const formControl = input.parentElement;
+    //         formControl.className = 'form-control success';
+    //     }
+        
+    //     // SOCIAL PANEL JS
+    //     const floating_btn = document.querySelector('.floating-btn');
+    //     const close_btn = document.querySelector('.close-btn');
+    //     const social_panel_container = document.querySelector('.social-panel-container');
+    //     floating_btn.addEventListener('click', () => {
+    //         social_panel_container.classList.toggle('visible')
+    //     });
+    //     close_btn.addEventListener('click', () => {
+    //         social_panel_container.classList.remove('visible')
+    //     });
+    </script>
+
+ 
+  
+   
+</body>
+</html>
